@@ -1,0 +1,223 @@
+.post-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.post-card:hover,
+.post-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: var(--accent-border);
+  box-shadow: var(--card-shadow-hover);
+  outline: none;
+}
+
+.post-card-cover {
+  width: 100%;
+  height: 205px;
+  overflow: hidden;
+  background: var(--tag-bg);
+}
+
+.post-card-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.post-card:hover .post-card-cover img {
+  transform: scale(1.045);
+}
+
+.post-card-cover-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, var(--tag-bg), var(--category-bg));
+  color: var(--text-muted);
+}
+
+.post-card-cover-placeholder span:first-child {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.post-card-cover-placeholder span:last-child {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.post-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.35rem 1.4rem 1.15rem;
+}
+
+.post-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.post-category-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  background: var(--category-bg);
+  color: var(--category-text);
+}
+
+.post-date-top {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.post-card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 0.8rem;
+  color: var(--text-heading);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  transition: color 0.2s ease;
+}
+
+.post-card:hover .post-card-title {
+  color: var(--accent-color);
+}
+
+.post-card-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.post-card-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+  color: var(--accent-color);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.post-card-read-link span {
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover .post-card-read-link span {
+  transform: translate(3px, -2px);
+}
+
+.post-card-footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.post-author-group {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.post-author-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--border-color);
+}
+
+.post-author-avatar-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-heading);
+  font-weight: 750;
+}
+
+.post-author-meta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.post-author-name {
+  overflow: hidden;
+  color: var(--text-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-author-role {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  .post-card {
+    border-radius: 16px;
+  }
+
+  .post-card-cover {
+    height: 185px;
+  }
+
+  .post-card-body {
+    padding: 1.1rem;
+  }
+
+  .post-card-footer {
+    padding: 0.9rem 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .post-card,
+  .post-card-cover img,
+  .post-card-title,
+  .post-card-read-link span {
+    transition: none;
+  }
+}

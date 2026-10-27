@@ -1,0 +1,108 @@
+:root {
+  /* Design Tokens - Dark Theme (Default) */
+  --bg-primary: #0f1015;
+  --bg-secondary: #161720;
+  --nav-bg: rgba(15, 16, 21, 0.85);
+  --footer-bg: #0c0d11;
+  --card-bg: #181924;
+  --card-hover-bg: #202230;
+  --border-color: #262838;
+  --accent-border: rgba(66, 133, 244, 0.5);
+
+  --text-heading: #f8fafc;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-color: #4285F4;
+  --accent-gradient: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(66, 133, 244, 0.12) 0%, rgba(15, 16, 21, 0) 70%);
+
+  --category-bg: rgba(66, 133, 244, 0.15);
+  --category-text: #93c5fd;
+  --tag-bg: rgba(148, 163, 184, 0.1);
+
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --card-shadow-hover: 0 12px 30px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--accent-border);
+  --subtle-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-family: var(--sans);
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme='light'] {
+  /* Design Tokens - Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --nav-bg: rgba(248, 250, 252, 0.88);
+  --footer-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-hover-bg: #f8fafc;
+  --border-color: #e2e8f0;
+  --accent-border: rgba(66, 133, 244, 0.4);
+
+  --text-heading: #0f172a;
+  --text-primary: #334155;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --accent-color: #2563eb;
+  --hero-gradient: radial-gradient(circle at 50% 0%, rgba(66, 133, 244, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
+
+  --category-bg: rgba(37, 99, 235, 0.1);
+  --category-text: #1d4ed8;
+  --tag-bg: #f1f5f9;
+
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 12px 28px -4px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--accent-border);
+  --subtle-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}

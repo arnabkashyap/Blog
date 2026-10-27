@@ -1,0 +1,127 @@
+.post-detail-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.back-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-heading);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--card-hover-bg);
+  border-color: var(--accent-color);
+  transform: translateX(-2px);
+}
+
+.detail-header {
+  margin-bottom: 2rem;
+}
+
+.detail-category-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: var(--category-bg);
+  color: var(--category-text);
+  margin-bottom: 1rem;
+}
+
+.detail-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-heading);
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.detail-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.detail-author-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detail-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--border-color);
+}
+
+.detail-author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-author-name {
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 0.95rem;
+}
+
+.detail-author-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.detail-info-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.detail-content {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin: 2rem 0;
+}
+
+.detail-content p {
+  margin-bottom: 1.5rem;
+}
+
+.detail-placeholder-box {
+  background: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  color: var(--text-secondary);
+  font-size: 0.925rem;
+}
+
+.detail-placeholder-box strong {
+  color: var(--text-heading);
+}
